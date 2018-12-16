@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
+             x:Class="Doctriod.App">
+
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="LargeHeading" TargetType="Label">
+                <Setter Property="TextColor" Value="#19769F"/>
+                <Setter Property="FontAttributes" Value="Bold,500"/>
+                <Setter Property="FontSize" Value="24"/>
+                <Setter Property="FontFamily">
+                    <OnPlatform x:TypeArguments="system:String">
+                        <On Platform="iOS" Value="GothamRounded-Bold" />
+                        <On Platform="Android" Value="GothamRoundedBold_21016.ttf#Gotham Rounded" />
+                    </OnPlatform>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+
+</prism:PrismApplication>
