@@ -1,4 +1,5 @@
-﻿using Prism;
+﻿using Doctriod.NavPage;
+using Prism;
 using Prism.Ioc;
 using Doctriod.ViewModels;
 using Doctriod.Views;
@@ -10,11 +11,6 @@ namespace Doctriod
 {
     public partial class App
     {
-        /* 
-         * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
-         * This imposes a limitation in which the App class must have a default constructor. 
-         * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
-         */
         public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
@@ -23,13 +19,17 @@ namespace Doctriod
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            //MainPage = new CustomNavigationPage(new HomePage());
+            await NavigationService.NavigateAsync("Navigation/Home");
+            
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<NavigationPage>();
+            //containerRegistry.RegisterForNavigation<GradientHeaderNavigationPage>("Navigation");
+            containerRegistry.RegisterForNavigation<CustomNavigationPage>("Navigation");
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>("Home");
         }
     }
 }

@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Doctriod.Views.MainPage"
-             Title="{Binding Title}">
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Doctriod.Views.HomePage"
+             Title="Home Page!">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Label x:Name="PageHeading"
-               Text="Welcome to Xamarin Forms and Prism!" 
+               Text="Home Page Here" 
                Style="{StaticResource LargeHeading}"/>
 
-        <Entry x:Name="FontName"></Entry>
     </StackLayout>
 
 </ContentPage>
