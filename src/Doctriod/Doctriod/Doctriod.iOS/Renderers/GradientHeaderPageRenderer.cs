@@ -18,21 +18,24 @@ namespace Doctriod.iOS.Renderers
 
         private void SetGradientBackground()
         {
-            Color startColor = Color.FromHex("#19769f");
-            Color endColor = Color.FromHex("#35d8a6");
+            if (NavigationController != null)
+            {
+                Color startColor = Color.FromHex("#19769f");
+                Color endColor = Color.FromHex("#35d8a6");
 
-            var gradientLayer = new CAGradientLayer();
-            gradientLayer.Bounds = NavigationController.NavigationBar.Bounds;
-            gradientLayer.Colors = new CGColor[] { startColor.ToCGColor(), endColor.ToCGColor() };
-            gradientLayer.StartPoint = new CGPoint(0.0, 0.5);
-            gradientLayer.EndPoint = new CGPoint(1.0, 0.5);
+                var gradientLayer = new CAGradientLayer();
+                gradientLayer.Bounds = NavigationController.NavigationBar.Bounds;
+                gradientLayer.Colors = new CGColor[] { startColor.ToCGColor(), endColor.ToCGColor() };
+                gradientLayer.StartPoint = new CGPoint(0.0, 0.5);
+                gradientLayer.EndPoint = new CGPoint(1.0, 0.5);
 
-            UIGraphics.BeginImageContext(gradientLayer.Bounds.Size);
-            gradientLayer.RenderInContext(UIGraphics.GetCurrentContext());
-            UIImage image = UIGraphics.GetImageFromCurrentImageContext();
-            UIGraphics.EndImageContext();
+                UIGraphics.BeginImageContext(gradientLayer.Bounds.Size);
+                gradientLayer.RenderInContext(UIGraphics.GetCurrentContext());
+                UIImage image = UIGraphics.GetImageFromCurrentImageContext();
+                UIGraphics.EndImageContext();
 
-            NavigationController.NavigationBar.SetBackgroundImage(image, UIBarMetrics.Default);
+                NavigationController.NavigationBar.SetBackgroundImage(image, UIBarMetrics.Default);
+            }
         }
     }
 }
