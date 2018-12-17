@@ -18,10 +18,7 @@ namespace Doctriod
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
-            //MainPage = new CustomNavigationPage(new HomePage());
             await NavigationService.NavigateAsync("Navigation/Home");
-            
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

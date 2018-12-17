@@ -30,12 +30,8 @@ namespace Doctriod.Droid.Renderers
         Drawable _originalToolbarBackground;
         Drawable _originalWindowContent;
 
-        public GradientHeaderNavigationPageRenderer(Context context) : base(context)
-        {
+        public GradientHeaderNavigationPageRenderer(Context context) : base(context) { }
 
-        }
-
-   
         public override void OnViewAdded(Android.Views.View child)
         {
             base.OnViewAdded(child);
@@ -91,8 +87,6 @@ namespace Doctriod.Droid.Renderers
                 SetGradientBackground(_toolbar);
             }
         }
-
- 
 
         private void OnToolbarChildViewAdded(object sender, ChildViewAddedEventArgs e)
         {
