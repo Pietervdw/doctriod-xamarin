@@ -26,8 +26,8 @@ namespace Doctriod
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            //containerRegistry.RegisterForNavigation<GradientHeaderNavigationPage>("Navigation");
-            containerRegistry.RegisterForNavigation<CustomNavigationPage>("Navigation");
+            containerRegistry.RegisterForNavigation<GradientHeaderNavigationPage>("Navigation");
+            //containerRegistry.RegisterForNavigation<CustomNavigationPage>("Navigation");
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>("Home");
         }

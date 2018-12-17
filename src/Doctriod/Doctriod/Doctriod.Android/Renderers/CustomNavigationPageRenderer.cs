@@ -217,6 +217,7 @@ namespace Doctriod.Droid.Renderers
             }
 
         }
+
         public override void OnViewRemoved(Android.Views.View child)
         {
             base.OnViewRemoved(child);
