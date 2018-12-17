@@ -1,8 +1,13 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content.PM;
+using Android.Graphics.Drawables;
 using Android.OS;
+using Android.Views;
 using Prism;
 using Prism.Ioc;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
 namespace Doctriod.Droid
 {
@@ -17,6 +22,17 @@ namespace Doctriod.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.Kitkat)
+            {
+                //Window.DecorView.SystemUiVisibility = 0;
+                //var statusBarHeightInfo = typeof(FormsAppCompatActivity).GetField("_statusBarHeight", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+                //statusBarHeightInfo.SetValue(this, 0);
+                //Window.SetStatusBarColor(new Android.Graphics.Color(18, 52, 86, 255));
+
+            
+          
+            }
+
             LoadApplication(new App(new AndroidInitializer()));
         }
     }
