@@ -9,8 +9,6 @@ namespace Doctriod.Views
         public HomePage()
         {
             InitializeComponent();
-            CustomNavigationPage.SetGradientColors(this, new Tuple<Color, Color>(Color.FromHex("#19769f"), Color.FromHex("#35d8a6")));
-            CustomNavigationPage.SetGradientDirection(this, CustomNavigationPage.GradientDirection.LeftToRight);
         }
     }
 }
