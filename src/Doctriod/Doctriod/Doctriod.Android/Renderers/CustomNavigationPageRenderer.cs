@@ -476,6 +476,7 @@ namespace Doctriod.Droid.Renderers
 
         }
         #endregion
+
         #region Title TextView
         void UpdateToolbarTitle(Page lastPage, AppCompatTextView titleTextView, AppCompatTextView subTitleTextView, Typeface originalFont, ColorStateList defaultColorStateList)
         {
@@ -521,6 +522,7 @@ namespace Doctriod.Droid.Renderers
             }
 
         }
+
         void UpdateTitleText(AppCompatTextView titleTextView, string text)
         {
             if (!string.IsNullOrEmpty(text))

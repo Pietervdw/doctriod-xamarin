@@ -6,6 +6,7 @@ using Android.Content;
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Support.V7.Widget;
+using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Doctriod.Droid.Renderers;
@@ -85,6 +86,7 @@ namespace Doctriod.Droid.Renderers
                 _toolbar.ChildViewAdded += OnToolbarChildViewAdded;
 
                 SetGradientBackground(_toolbar);
+                SetTitle(lastPage);
             }
         }
 
@@ -112,6 +114,31 @@ namespace Doctriod.Droid.Renderers
             GradientDrawable gradient = new GradientDrawable(direction, new int[] { colors.Item1.ToAndroid().ToArgb(), colors.Item2.ToAndroid().ToArgb() });
             gradient.SetCornerRadius(0f);
             toolbar.SetBackground(gradient);
+        }
+
+        private void SetTitle(Page lastPage)
+        {
+            var titleViewParams = _titleViewLayout.LayoutParameters as Android.Widget.FrameLayout.LayoutParams;
+            var titleTextViewParams = _titleTextView.LayoutParameters as LinearLayout.LayoutParams;
+
+            titleViewParams.Gravity = GravityFlags.Center | GravityFlags.CenterHorizontal | GravityFlags.CenterVertical;
+            titleTextViewParams.TopMargin = 40;
+            titleViewParams.RightMargin = 0;
+            titleViewParams.LeftMargin = 0;
+            
+            titleTextViewParams.Gravity = GravityFlags.Center | GravityFlags.CenterHorizontal | GravityFlags.CenterVertical;
+            titleTextViewParams.TopMargin = 40;
+            titleTextViewParams.RightMargin = 0;
+            titleTextViewParams.LeftMargin = 0;
+            
+
+            _titleTextView.SetTextColor(Android.Graphics.Color.White);
+            _titleTextView.Text = lastPage.Title;
+            _titleTextView.Typeface = Typeface.CreateFromAsset(Context.Assets, "GothamRoundedBold_21016.ttf");
+            _titleTextView.SetTextSize(ComplexUnitType.Pt, 10);
+            _titleTextView.LayoutParameters = titleViewParams;
+
+            _titleViewLayout.LayoutParameters = titleViewParams;
         }
 
     }

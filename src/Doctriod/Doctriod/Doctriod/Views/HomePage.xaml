@@ -4,7 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Doctriod.Views.HomePage"
-             Title="Home Page!">
+             Title="Doctriod">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Label x:Name="PageHeading"
