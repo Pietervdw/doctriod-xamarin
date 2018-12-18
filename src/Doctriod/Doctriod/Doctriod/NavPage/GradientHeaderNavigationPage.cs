@@ -7,7 +7,7 @@ namespace Doctriod.NavPage
     {
         public GradientHeaderNavigationPage(Page page) : base(page)
         {
-
+            BarTextColor = Color.White;
         }
     }
 }

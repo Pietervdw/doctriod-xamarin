@@ -4,14 +4,13 @@
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="Doctriod.Views.DrawerMenuPage">
-
+    
     <MasterDetailPage.Master>
-        <ContentPage Title="Menu">
+        <ContentPage Title="Menu" Icon="hamburgermenu">
             <StackLayout Padding="20">
-                <!-- TODO: // Update the Layout and add some real menu items  -->
                 <Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>
-    
+
 </MasterDetailPage>
