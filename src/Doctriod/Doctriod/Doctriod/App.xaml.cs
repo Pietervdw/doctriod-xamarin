@@ -18,17 +18,22 @@ namespace Doctriod
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            await NavigationService.NavigateAsync("/Index/Navigation/Home");
+            await NavigationService.NavigateAsync("/Index/Navigation/HomeTabbed");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterForNavigation<GradientHeaderNavigationPage>("Navigation");
-            //containerRegistry.RegisterForNavigation<NavigationPage>("Navigation");
             containerRegistry.RegisterForNavigation<DrawerMenuPage, DrawerMenuPageViewModel>("Index");
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<GradientHeaderNavigationPage>("Navigation");
             containerRegistry.RegisterForNavigation<HomePage, HomePageViewModel>("Home");
+            containerRegistry.RegisterForNavigation<HomeTabbedPage, HomeTabbedPageViewModel>("HomeTabbed");
             
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+
+
+            containerRegistry.RegisterForNavigation<MedicinePage, MedicinePageViewModel>();
+            containerRegistry.RegisterForNavigation<ContactsPage, ContactsPageViewModel>();
+            containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
         }
     }
 }

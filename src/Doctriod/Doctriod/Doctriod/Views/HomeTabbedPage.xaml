@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:views="clr-namespace:Doctriod.Views;assembly=Doctriod"
+            prism:ViewModelLocator.AutowireViewModel="True"
+            x:Class="Doctriod.Views.HomeTabbedPage"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            android:TabbedPage.BarSelectedItemColor="#19769F"
+            Title="Doctriod" BarBackgroundColor="White" BarTextColor="#A8A8A8">
+
+    <views:HomePage Icon="home" Title="Home" />
+    <views:MedicinePage Icon="meds" Title="Medicine"/>
+    <views:ContactsPage Icon="contact" Title="Contacts"/>
+    <views:SettingsPage Icon="settings" Title="Settings"/>
+
+</TabbedPage>

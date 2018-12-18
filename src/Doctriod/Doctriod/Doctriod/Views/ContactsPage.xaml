@@ -2,16 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:views="clr-namespace:Doctriod.Views;assembly=Doctriod"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Doctriod.Views.HomePage"
-             
-             Title="Doctriod">
+             x:Class="Doctriod.Views.ContactsPage" Title="Emergency Contacts">
 
-   
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
         <Label x:Name="PageHeading"
-               Text="Home Page Here" 
+               Text="Contacts Page Here" 
                Style="{StaticResource LargeHeading}"/>
 
     </StackLayout>
