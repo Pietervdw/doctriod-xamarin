@@ -98,7 +98,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork@1x.png" />
     <ITunesArtwork Include="iTunesArtwork@2x.png" />
-    <ITunesArtwork Include="iTunesArtwork@3x.png" />
     <BundleResource Include="Resources\Fonts\GothamRoundedBold_21016.ttf" />
     <BundleResource Include="Resources\Fonts\GothamRoundedBook_21018.ttf" />
   </ItemGroup>

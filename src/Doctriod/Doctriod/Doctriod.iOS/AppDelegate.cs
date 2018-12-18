@@ -1,4 +1,6 @@
-﻿using Foundation;
+﻿using System;
+using System.Text;
+using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;

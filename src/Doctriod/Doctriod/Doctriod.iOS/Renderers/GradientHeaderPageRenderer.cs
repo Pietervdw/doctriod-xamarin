@@ -10,10 +10,18 @@ namespace Doctriod.iOS.Renderers
 {
     public class GradientHeaderPageRenderer : PageRenderer
     {
+        //UILabel _titleLabel;
+
         public override void ViewWillAppear(bool animated)
         {
             base.ViewWillAppear(animated);
             SetGradientBackground();
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            SetTitle();
         }
 
         private void SetGradientBackground()
@@ -36,6 +44,15 @@ namespace Doctriod.iOS.Renderers
 
                 NavigationController.NavigationBar.SetBackgroundImage(image, UIBarMetrics.Default);
             }
+        }
+
+        private void SetTitle()
+        {
+            var att = new UITextAttributes();
+            UIFont customFont = UIFont.FromName("GothamRounded-Bold", 20);
+            att.Font = customFont;
+            att.TextColor = UIColor.White;
+            UINavigationBar.Appearance.SetTitleTextAttributes(att);
         }
     }
 }

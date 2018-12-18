@@ -130,13 +130,11 @@ namespace Doctriod.Droid.Renderers
             titleTextViewParams.TopMargin = 40;
             titleTextViewParams.RightMargin = 0;
             titleTextViewParams.LeftMargin = 0;
-            
 
             _titleTextView.SetTextColor(Android.Graphics.Color.White);
             _titleTextView.Text = lastPage.Title;
             _titleTextView.Typeface = Typeface.CreateFromAsset(Context.Assets, "GothamRoundedBold_21016.ttf");
             _titleTextView.SetTextSize(ComplexUnitType.Pt, 10);
-            //_titleTextView.LayoutParameters = titleViewParams;
 
             _titleViewLayout.LayoutParameters = titleViewParams;
         }

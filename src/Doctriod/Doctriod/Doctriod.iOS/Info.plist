@@ -48,12 +48,10 @@
     </array>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
-
     <key>UIAppFonts</key>
     <array>
-      <string>GothamRoundedBook_21018.ttf</string>
-      <string>GothamRoundedBold_21016.ttf</string>
+      <string>Fonts/GothamRoundedBook_21018.ttf</string>
+      <string>Fonts/GothamRoundedBold_21016.ttf</string>
     </array>
-
   </dict>
 </plist>
