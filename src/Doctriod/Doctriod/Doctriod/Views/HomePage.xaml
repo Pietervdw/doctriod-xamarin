@@ -8,7 +8,7 @@
              x:Class="Doctriod.Views.HomePage"
              Title="Doctriod" BackgroundColor="White">
 
-    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20,40,20,40" RowSpacing="20" ColumnSpacing="20">
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="10,40,10,40" RowSpacing="20" ColumnSpacing="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*"/>
@@ -25,8 +25,8 @@
         <controls:DoctroidPictureButton Text="Doctors" Icon="surgeon" Grid.Row="0" Grid.Column="0" />
         <controls:DoctroidPictureButton Text="Hospitals" Icon="hospital" Grid.Row="0" Grid.Column="1" />
 
-        <controls:DoctroidPictureButton Text="Insurance" Icon="first-aid-kit" Grid.Row="1" Grid.Column="0" />
-        <controls:DoctroidPictureButton Text="Appointments" Icon="medical-history"  Grid.Row="1" Grid.Column="1" />
+        <controls:DoctroidPictureButton Text="Insurance" Icon="firstaidkit" Grid.Row="1" Grid.Column="0" />
+        <controls:DoctroidPictureButton Text="History" Icon="medicalhistory"  Grid.Row="1" Grid.Column="1" />
 
         <controls:DoctroidPictureButton Text="Emergency" Icon="ambulance" Grid.Row="2" Grid.Column="0" />
         <controls:DoctroidPictureButton Text="Medicine" Icon="pill" Grid.Row="2" Grid.Column="1" />

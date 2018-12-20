@@ -240,13 +240,13 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\ItunesArtwork@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\first-aid-kit.imageset\first-aid-kit.png">
+    <ImageAsset Include="Assets.xcassets\firstaidkit.imageset\first-aid-kit.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\first-aid-kit.imageset\first-aid-kit@2x.png">
+    <ImageAsset Include="Assets.xcassets\firstaidkit.imageset\first-aid-kit@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\first-aid-kit.imageset\first-aid-kit@3x.png">
+    <ImageAsset Include="Assets.xcassets\firstaidkit.imageset\first-aid-kit@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\hamburgermenu.imageset\Contents.json">
@@ -291,7 +291,7 @@
     <ImageAsset Include="Assets.xcassets\hospital.imageset\hospital@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\first-aid-kit.imageset\Contents.json">
+    <ImageAsset Include="Assets.xcassets\firstaidkit.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ambulance.imageset\Contents.json">
@@ -300,16 +300,16 @@
     <ImageAsset Include="Assets.xcassets\pill.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\medical-history.imageset\Contents.json">
+    <ImageAsset Include="Assets.xcassets\medicalhistory.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\medical-history.imageset\medical-history.png">
+    <ImageAsset Include="Assets.xcassets\medicalhistory.imageset\medical-history.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\medical-history.imageset\medical-history@2x.png">
+    <ImageAsset Include="Assets.xcassets\medicalhistory.imageset\medical-history@2x.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\medical-history.imageset\medical-history@3x.png">
+    <ImageAsset Include="Assets.xcassets\medicalhistory.imageset\medical-history@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\pill.imageset\pill.png">

@@ -148,112 +148,112 @@
     <AndroidResource Include="Resources\drawable\meds.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\surgeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\surgeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\surgeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\surgeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\surgeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-ldpi\hospital.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\surgeon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\surgeon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ambulance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-ldpi\surgeon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\firstaidkit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\surgeon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\surgeon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\medicalhistory.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\surgeon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pill.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\surgeon.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ambulance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\first-aid-kit.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\firstaidkit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-ldpi\first-aid-kit.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\first-aid-kit.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\medicalhistory.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\first-aid-kit.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\pill.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\first-aid-kit.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ambulance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\first-aid-kit.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\medical-history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\firstaidkit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-ldpi\medical-history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\medicalhistory.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\medical-history.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\pill.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\medical-history.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ambulance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\medical-history.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\firstaidkit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\medical-history.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ambulance.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\medicalhistory.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-ldpi\ambulance.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\pill.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ambulance.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ambulance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ambulance.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\firstaidkit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ambulance.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ambulance.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\medicalhistory.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\pill.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\pill.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-ldpi\pill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ambulance.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\pill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\firstaidkit.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\pill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\pill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\medicalhistory.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\pill.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\pill.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
