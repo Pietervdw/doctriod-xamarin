@@ -2,18 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:views="clr-namespace:Doctriod.Views;assembly=Doctriod"
+             xmlns:controls="clr-namespace:Doctriod.Controls;assembly=Doctriod"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Doctriod.Views.HomePage"
-             
-             Title="Doctriod">
+             Title="Doctriod" BackgroundColor="White">
 
-   
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label x:Name="PageHeading"
-               Text="Home Page Here" 
-               Style="{StaticResource LargeHeading}"/>
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="20,40,20,40" RowSpacing="20" ColumnSpacing="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-    </StackLayout>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/-->
+
+        <controls:DoctroidPictureButton Text="Doctors" Icon="surgeon" Grid.Row="0" Grid.Column="0" />
+        <controls:DoctroidPictureButton Text="Hospitals" Icon="hospital" Grid.Row="0" Grid.Column="1" />
+
+        <controls:DoctroidPictureButton Text="Insurance" Icon="first-aid-kit" Grid.Row="1" Grid.Column="0" />
+        <controls:DoctroidPictureButton Text="Appointments" Icon="medical-history"  Grid.Row="1" Grid.Column="1" />
+
+        <controls:DoctroidPictureButton Text="Emergency" Icon="ambulance" Grid.Row="2" Grid.Column="0" />
+        <controls:DoctroidPictureButton Text="Medicine" Icon="pill" Grid.Row="2" Grid.Column="1" />
+
+    </Grid>
+
 
 </ContentPage>
