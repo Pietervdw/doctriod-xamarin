@@ -7,6 +7,13 @@ namespace Doctriod.Views
         public DrawerMenuPage()
         {
             InitializeComponent();
+      
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            //EntrySize.Text = $"{ImageAvatar.Width.ToString()},{ImageAvatar.Height.ToString()} ";
         }
     }
 }

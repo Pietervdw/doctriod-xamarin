@@ -3,6 +3,8 @@
 namespace Doctriod.NavPage
 {
     //https://forums.xamarin.com/discussion/22440/gradient-as-background-color
+    //https://stackoverflow.com/questions/28848545/add-gradient-background-to-layouts-in-xamarin-forms-visual-studio
+    //https://github.com/tbaggett/xfgloss
     public class GradientContentPage : ContentPage
     {
         public GradientContentPage()

@@ -3,13 +3,44 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   xmlns:navPage="clr-namespace:Doctriod.NavPage;assembly=Doctriod"
+                  xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="Doctriod.Views.DrawerMenuPage">
-    
+
     <MasterDetailPage.Master>
         <navPage:GradientContentPage Title="Menu" Icon="hamburgermenu">
             <StackLayout Padding="20">
-                <Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" />
+
+                <Grid Padding="0,50,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="radarcircle" Grid.Row="0" Grid.Column="0" x:Name="ImageAvatar"
+                           VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                    <abstractions:CircleImage Source="https://randomuser.me/api/portraits/lego/5.jpg" Aspect="AspectFill"
+                                              VerticalOptions="Center" HorizontalOptions="Center"
+                                              Grid.Row="0" Grid.Column="0" >
+                        <abstractions:CircleImage.WidthRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android, iOS">75</On>
+                            </OnPlatform>
+                        </abstractions:CircleImage.WidthRequest>
+                        <abstractions:CircleImage.HeightRequest>
+                            <OnPlatform x:TypeArguments="x:Double">
+                                <On Platform="Android, iOS">75</On>
+                            </OnPlatform>
+                        </abstractions:CircleImage.HeightRequest>
+                    </abstractions:CircleImage>
+
+                </Grid>
+
+                <Entry x:Name="EntrySize"></Entry>
+
             </StackLayout>
         </navPage:GradientContentPage>
     </MasterDetailPage.Master>
