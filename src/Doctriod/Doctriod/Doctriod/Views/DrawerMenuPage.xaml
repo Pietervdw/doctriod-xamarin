@@ -11,7 +11,13 @@
         <navPage:GradientContentPage Title="Menu" Icon="hamburgermenu">
             <StackLayout Padding="20">
 
-                <Grid Padding="0,50,0,0">
+                <Grid>
+                    <Grid.Padding>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,50,0,0" />
+                            <On Platform="Android" Value="0,20,0,0" />
+                        </OnPlatform>
+                    </Grid.Padding>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
@@ -39,7 +45,7 @@
 
                 </Grid>
 
-                <Entry x:Name="EntrySize"></Entry>
+                <!--<Entry x:Name="EntrySize"></Entry>-->
 
             </StackLayout>
         </navPage:GradientContentPage>
