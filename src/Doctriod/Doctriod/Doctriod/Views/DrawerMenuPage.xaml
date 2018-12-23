@@ -4,12 +4,13 @@
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   xmlns:navPage="clr-namespace:Doctriod.NavPage;assembly=Doctriod"
                   xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                  xmlns:system="clr-namespace:System;assembly=netstandard"
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="Doctriod.Views.DrawerMenuPage">
 
     <MasterDetailPage.Master>
         <navPage:GradientContentPage Title="Menu" Icon="hamburgermenu">
-            <StackLayout Padding="20">
+            <StackLayout Padding="0,20,0,0">
 
                 <Grid>
                     <Grid.Padding>
@@ -23,6 +24,7 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
+                        <!--<RowDefinition Height="*"></RowDefinition>-->
                     </Grid.RowDefinitions>
 
                     <Image Source="radarcircle" Grid.Row="0" Grid.Column="0" x:Name="ImageAvatar"
@@ -43,9 +45,59 @@
                         </abstractions:CircleImage.HeightRequest>
                     </abstractions:CircleImage>
 
+
+                    <Label Text="Zap Xanflorp" Grid.Row="1" Grid.Column="0" FontSize="24" TextColor="White"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+                           VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
                 </Grid>
 
-                <!--<Entry x:Name="EntrySize"></Entry>-->
+                <ListView x:Name="MenuItemsListView" 
+                          SeparatorVisibility="None"
+                          ItemsSource="{Binding MenuItems}" BackgroundColor="Transparent" RowHeight="50">
+
+                    <ListView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <ViewCell>
+
+                                <StackLayout Orientation="Vertical" Padding="0" Spacing="0">
+
+                                    <BoxView BackgroundColor="White" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" IsVisible="{Binding IsFirst}" />
+
+                                    <StackLayout Orientation="Horizontal" Padding="0">
+
+                                        <BoxView BackgroundColor="White" WidthRequest="7" IsVisible="{Binding IsActive}"/>
+                                        <BoxView BackgroundColor="Transparent" WidthRequest="7" IsVisible="{Binding IsNotActive}"/>
+
+                                        <Label Text="{Binding Title}" TextColor="White" FontSize="18"
+                                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="system:String">
+                                                    <On Platform="iOS" Value="GothamRounded-Book" />
+                                                    <On Platform="Android" Value="GothamRoundedBook_21018.ttf#Gotham Rounded" />
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+
+                                    </StackLayout>
+
+                                    <BoxView BackgroundColor="White" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+
+                                </StackLayout>
+
+                            </ViewCell>
+
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                    <ListView.Footer>
+                        <Label />
+                        <!--https://forums.xamarin.com/discussion/39200/how-to-hide-the-empty-rows-of-a-list-view-in-xamrin-forms-in-ios-->
+                    </ListView.Footer>
+
+                </ListView>
 
             </StackLayout>
         </navPage:GradientContentPage>
