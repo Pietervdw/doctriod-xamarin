@@ -4,9 +4,17 @@
                   xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
                   xmlns:navPage="clr-namespace:Doctriod.NavPage;assembly=Doctriod"
                   xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                  xmlns:converters="clr-namespace:Doctriod.Converters;assembly=Doctriod"
                   xmlns:system="clr-namespace:System;assembly=netstandard"
+                  xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
                   prism:ViewModelLocator.AutowireViewModel="True"
                   x:Class="Doctriod.Views.DrawerMenuPage">
+
+    <MasterDetailPage.Resources>
+        <ResourceDictionary>
+            <converters:ItemTappedEventArgsConverter x:Key="ItemTappedEventArgsConverter" />
+        </ResourceDictionary>
+    </MasterDetailPage.Resources>
 
     <MasterDetailPage.Master>
         <navPage:GradientContentPage Title="Menu" Icon="hamburgermenu">
@@ -53,7 +61,13 @@
 
                 <ListView x:Name="MenuItemsListView" 
                           SeparatorVisibility="None"
-                          ItemsSource="{Binding MenuItems}" BackgroundColor="Transparent" RowHeight="50">
+                          ItemsSource="{Binding MenuItems,Mode=TwoWay}" BackgroundColor="Transparent" RowHeight="50">
+
+                    <ListView.Behaviors>
+                        <behaviors:EventToCommandBehavior EventName="ItemTapped" 
+                                                          Command="{Binding ItemTappedCommand}"
+                                                          EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}"/>
+                    </ListView.Behaviors>
 
                     <ListView.ItemTemplate>
 
@@ -61,17 +75,17 @@
 
                             <ViewCell>
 
-                                <StackLayout Orientation="Vertical" Padding="0" Spacing="0">
+                                <StackLayout Orientation="Vertical" Padding="0" Spacing="0" HeightRequest="50">
 
                                     <BoxView BackgroundColor="White" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" IsVisible="{Binding IsFirst}" />
 
-                                    <StackLayout Orientation="Horizontal" Padding="0">
+                                    <StackLayout Orientation="Horizontal" Padding="0" HeightRequest="50">
 
-                                        <BoxView BackgroundColor="White" WidthRequest="7" IsVisible="{Binding IsActive}"/>
-                                        <BoxView BackgroundColor="Transparent" WidthRequest="7" IsVisible="{Binding IsNotActive}"/>
+                                        <BoxView BackgroundColor="White" WidthRequest="7" HeightRequest="50" IsVisible="{Binding IsActive}" VerticalOptions="FillAndExpand"/>
+                                        <BoxView BackgroundColor="Transparent" WidthRequest="7" HeightRequest="50" IsVisible="{Binding IsNotActive}" VerticalOptions="FillAndExpand"/>
 
                                         <Label Text="{Binding Title}" TextColor="White" FontSize="18"
-                                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                               HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
                                             <Label.FontFamily>
                                                 <OnPlatform x:TypeArguments="system:String">
                                                     <On Platform="iOS" Value="GothamRounded-Book" />

@@ -7,13 +7,12 @@ namespace Doctriod.Views
         public DrawerMenuPage()
         {
             InitializeComponent();
-      
+            MenuItemsListView.ItemTapped += MenuItemsListView_ItemTapped;
         }
 
-        protected override void OnAppearing()
+        private void MenuItemsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            base.OnAppearing();
-            //EntrySize.Text = $"{ImageAvatar.Width.ToString()},{ImageAvatar.Height.ToString()} ";
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }
