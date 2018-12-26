@@ -2,12 +2,57 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:effects="clr-namespace:Doctriod.Effects;assembly=Doctriod"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Doctriod.Views.LoginPage"
-             BackgroundColor="White">
-
-
-
+             BackgroundColor="White" NavigationPage.HasNavigationBar="False">
     <!--NavigationPage.HasNavigationBar="False"-->
+
+    <StackLayout Orientation="Vertical" Margin="15">
+
+        <Image Source="backarrow" HeightRequest="40"
+               HorizontalOptions="StartAndExpand" Margin="0,50,0,0">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigateCommand}"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Label Text="Sign In" Style="{StaticResource LargeHeading}" HorizontalOptions="StartAndExpand" Margin="0,75,0,40"/>
+
+        <Entry Text="{Binding Email}" Placeholder="E-mail" PlaceholderColor="#95989A" Margin="0,0,0,30" HeightRequest="40">
+            <Entry.Effects>
+                <effects:EntryBorderEffect/>
+            </Entry.Effects>
+        </Entry>
+
+        <Entry Text="{Binding Password}" Placeholder="Password" PlaceholderColor="#95989A" Margin="0,0,0,30" HeightRequest="40">
+            <Entry.Effects>
+                <effects:EntryBorderEffect/>
+            </Entry.Effects>
+        </Entry>
+
+        <StackLayout Orientation="Horizontal" Margin="0,0,0,30">
+            <Label Text="Remember" HorizontalOptions="StartAndExpand" TextColor="#95989A" FontSize="20">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="system:String">
+                        <On Platform="iOS" Value="GothamRounded-Book" />
+                        <On Platform="Android" Value="GothamRoundedBook_21018.ttf#Gotham Rounded" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Label Text="Forgot Password?" HorizontalOptions="EndAndExpand" TextColor="#95989A" FontSize="20">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="system:String">
+                        <On Platform="iOS" Value="GothamRounded-Book" />
+                        <On Platform="Android" Value="GothamRoundedBook_21018.ttf#Gotham Rounded" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+        </StackLayout>
+
+    </StackLayout>
+
+
 
 </ContentPage>
