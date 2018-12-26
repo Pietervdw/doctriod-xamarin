@@ -18,7 +18,7 @@ namespace Doctriod
         protected override async void OnInitialized()
         {
             InitializeComponent();
-            Settings.ActiveMenu = "Home";
+            Settings.ActiveMenu = "HomeTabbed";
             await NavigationService.NavigateAsync("/Index/Navigation/HomeTabbed");
         }
 
@@ -33,7 +33,7 @@ namespace Doctriod
 
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
 
-            containerRegistry.RegisterForNavigation<MedicinePage, MedicinePageViewModel>();
+            containerRegistry.RegisterForNavigation<MedicinePage, MedicinePageViewModel>("Medicine");
             containerRegistry.RegisterForNavigation<ContactsPage, ContactsPageViewModel>();
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
 
