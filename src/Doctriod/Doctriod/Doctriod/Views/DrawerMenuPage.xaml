@@ -18,7 +18,7 @@
 
     <MasterDetailPage.Master>
         <navPage:GradientContentPage Title="Menu" Icon="hamburgermenu">
-            <StackLayout Padding="0,20,0,0">
+            <StackLayout>
 
                 <Grid>
                     <Grid.Padding>
@@ -61,7 +61,7 @@
 
                 <ListView x:Name="MenuItemsListView" 
                           SeparatorVisibility="None"
-                          ItemsSource="{Binding MenuItems,Mode=TwoWay}" BackgroundColor="Transparent" RowHeight="50">
+                          ItemsSource="{Binding MenuItems,Mode=TwoWay}" BackgroundColor="Transparent" RowHeight="52">
 
                     <ListView.Behaviors>
                         <behaviors:EventToCommandBehavior EventName="ItemTapped" 
@@ -79,7 +79,7 @@
 
                                     <BoxView BackgroundColor="White" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="End" IsVisible="{Binding IsFirst}" />
 
-                                    <StackLayout Orientation="Horizontal" Padding="0" HeightRequest="50">
+                                    <StackLayout Orientation="Horizontal" Padding="0" HeightRequest="52">
 
                                         <BoxView BackgroundColor="White" WidthRequest="7" HeightRequest="50" IsVisible="{Binding IsActive}" VerticalOptions="FillAndExpand"/>
                                         <BoxView BackgroundColor="Transparent" WidthRequest="7" HeightRequest="50" IsVisible="{Binding IsNotActive}" VerticalOptions="FillAndExpand"/>

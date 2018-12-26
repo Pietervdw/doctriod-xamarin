@@ -43,7 +43,7 @@ namespace Doctriod.ViewModels
             MenuItems.Add(new MenuItem() { Title = "INSURANCE", Page = "Insurance", IsActive = false, MustBeLoggedIn = false });
             MenuItems.Add(new MenuItem() { Title = "HISTORY", Page = "History", IsActive = false, MustBeLoggedIn = false });
             MenuItems.Add(new MenuItem() { Title = "MEDICINE", Page = "Medicine", IsActive = false, MustBeLoggedIn = false });
-            MenuItems.Add(new MenuItem() { Title = "LOG OUT", Page = "LogOut", IsActive = false, MustBeLoggedIn = false });
+            MenuItems.Add(new MenuItem() { Title = "LOG IN", Page = "LogIn", IsActive = false, MustBeLoggedIn = false });
         }
     }
 }
